@@ -8,7 +8,6 @@
   *{margin:0;padding:0;box-sizing:border-box;}
   body{font-family:'Segoe UI',sans-serif;background:#0f0f0f;color:#fff;overflow-x:hidden;}
 
-  /* Header */
   header{background:#1a1a1a;padding:15px 50px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 4px 10px rgba(0,0,0,0.5);}
   .logo-container{display:flex;align-items:center;text-decoration:none;}
   .logo{height:50px;margin-right:15px;}
@@ -16,7 +15,6 @@
   nav a{color:#fff;text-decoration:none;margin-left:20px;font-weight:500;transition:0.3s;}
   nav a:hover{color:#fff;}
 
-  /* Hero */
   .hero{position:relative;height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;color:white;overflow:hidden;background:linear-gradient(45deg,#ff0080,#7928ca,#00ffff,#ffdc00,#ff0080);background-size:600% 600%;animation:gradientShift 20s ease infinite;}
   @keyframes gradientShift{0%{background-position:0% 50%;}25%{background-position:50% 50%;}50%{background-position:100% 50%;}75%{background-position:50% 50%;}100%{background-position:0% 50%;}}
   .hero-content{position:relative;z-index:1;animation:fadeInUp 2s ease;}
@@ -25,28 +23,23 @@
   .hero button:hover{transform:scale(1.1);box-shadow:0 0 15px #fff;}
   @keyframes fadeInUp{from{opacity:0;transform:translateY(50px);}to{opacity:1;transform:translateY(0);}}
 
-  /* Partiküller */
   .hero .particle{position:absolute;top:-10px;border-radius:50%;background:rgba(255,255,255,1);pointer-events:none;box-shadow:0 0 6px rgba(255,255,255,0.8);animation:fall linear infinite;}
   @keyframes fall{0%{transform:translateY(0);opacity:1;}100%{transform:translateY(110vh);opacity:0;}}
 
-  /* Bölümler */
   .section{padding:60px 50px;text-align:center;opacity:0;transform:translateY(40px);transition:opacity 1s ease, transform 1s ease;}
   .section.visible{opacity:1;transform:translateY(0);}
   .section h3{font-size:2rem;margin-bottom:20px;color:#fff;}
 
-  /* Projelerimiz kartları */
   .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:30px;}
   .project-card{background:#1a1a1a;padding:100px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.5);transition:transform 0.3s, box-shadow 0.3s;}
   .project-card:hover{transform:translateY(-10px);box-shadow:0 8px 20px rgba(255,255,255,0.5);}
 
-  /* İletişim */
   #contact{background:#000;}
   .social-links{display:flex;justify-content:center;align-items:center;gap:30px;margin-top:30px;}
   .social-links a{display:inline-block;}
   .social-links img{width:35px;height:35px;transition:transform 0.2s ease-in-out;}
   .social-links a:hover img{transform:scale(1.2);}
 
-  /* Footer */
   footer{background:#111;text-align:center;padding:20px;margin-top:40px;font-size:0.9rem;color:#aaa;}
 </style>
 </head>
@@ -65,22 +58,20 @@
 
   <section class="hero">
     <div class="hero-content">
-      <h2>Hayal Gücünü Gerçeğe Dönüştürüyoruz 🎮</h2>
+      <h2>Öğrendiklerimizi sizinle paylaşıyoruz!</h2>
       <button onclick="scrollToSection('games')">Projelere Göz At</button>
     </div>
   </section>
 
   <section id="about" class="section">
     <h3>Hakkımızda</h3>
-    <p>Keops Studios, bağımsız oyun ve uygulama geliştirme şirketidir. Amacımız kullanıcıya unutulmaz deneyimler sunmaktır.</p>
+    <p>Keops Studios, bağımsız oyun ve yazılım geliştiren bir ekibiz. EKibimiz 2 kişisen oluşmaktadır ve sürekli öğrenmektedir.</p>
   </section>
 
   <section id="games" class="section">
     <h3>Projelerimiz</h3>
     <div class="projects">
-      <div class="project-card"></div>
-      <div class="project-card"></div>
-      <div class="project-card"></div>
+      <div class="project-card">Gizemli proje?</div>
     </div>
   </section>
 
@@ -119,13 +110,14 @@
     const particle=document.createElement('div');
     particle.classList.add('particle');
     particle.style.left=Math.random()*100+'vw';
-    const size=8; // büyük ve sabit
+    const size=8;
     particle.style.width=particle.style.height=size+'px';
     particle.style.animationDuration='5s';
     hero.appendChild(particle);
     setTimeout(()=>particle.remove(),6000);
   }
-  setInterval(createParticle,100); // sık partikül
+  setInterval(createParticle,100);
 </script>
 </body>
 </html>
+
