@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Keops Studios</title>
+<link
+      rel="shortcut icon"
+      href="logo.jpg"
+      type="image/x-icon"
+    />
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
   body{font-family:'Segoe UI',sans-serif;background:#0f0f0f;color:#fff;overflow-x:hidden;}
@@ -31,9 +36,9 @@
   .section h3{font-size:2rem;margin-bottom:20px;color:#fff;}
 
   .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin-top:30px;}
-  .project-card{background:#1a1a1a;padding:100px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.5);transition:transform 0.3s, box-shadow 0.3s;}
+  .project-card{background:#1a1a1a;padding:80px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.5);transition:transform 0.3s, box-shadow 0.3s;}
   .project-card:hover{transform:translateY(-10px);box-shadow:0 8px 20px rgba(255,255,255,0.5);}
-
+  .projects .project-card h1
   #contact{background:#000;}
   .social-links{display:flex;justify-content:center;align-items:center;gap:30px;margin-top:30px;}
   .social-links a{display:inline-block;}
@@ -65,13 +70,15 @@
 
   <section id="about" class="section">
     <h3>Hakkımızda</h3>
-    <p>Keops Studios, bağımsız oyun ve yazılım geliştiren bir ekibiz. EKibimiz 2 kişisen oluşmaktadır ve sürekli öğrenmektedir.</p>
+    <p>Keops Studios, bağımsız oyun ve yazılım geliştiren bir ekibiz. Ekibimiz 2 kişiden oluşmaktadır ve sürekli öğrenmektedir.</p>
   </section>
 
   <section id="games" class="section">
     <h3>Projelerimiz</h3>
     <div class="projects">
-      <div class="project-card">Gizemli proje?</div>
+      <div class="project-card">
+        <h2>Gizemli Proje?</h2>
+      </div>
     </div>
   </section>
 
@@ -120,4 +127,5 @@
 </script>
 </body>
 </html>
+
 
